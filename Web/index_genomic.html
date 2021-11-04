@@ -51,12 +51,25 @@
 
     <!-- window input sequence -->
     <div id = input_window>
+        <div class = "formblock all" in="qseq">
+            <label for ="seq">Enter FASTA sequence(s)</label>
+            <textarea id = "seq" class = "reset" rows = "5" cols = "80" name = "QUERY" suggesthint></textarea>
+            <label for="avatar"></label>
+            <input type="file"id="avatar" name="avatar" accept=".fasta">
+            <button type="button" onclick="displayValue();">BLAST</button>
+            
+        </div>
     </div>
  
 
     <!-- window for displaying graph -->
     <div id = graph_window>
-        <canvas id="graph"></canvas>
+        <canvas id="graph" height="360px"></canvas>
+        <!--<canvas id="query_length" height="360px"></canvas>
+         <canvas id="query_cover" height="360px"></canvas>
+        <canvas id="total_score" height="360px"></canvas>
+        <canvas id="e_value" height="360px"></canvas>
+        <canvas id="pourcent_identity" height="360px"></canvas> -->
     </div>
 
 
@@ -69,6 +82,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
     <script src="js/loading.js"></script>
     <script src= "js/graph.js"></script>
+    <script src="js/get_input.js"></script>
 
 </body>
 

@@ -31,6 +31,15 @@ async function start(){
     await connect();
 }
 
+async function connect(){
+    try{
+        await client.connect();
+    }
+    catch(e){
+        console.error(`Failed to connect ${e}`);
+    }
+}
+
 
 
 
