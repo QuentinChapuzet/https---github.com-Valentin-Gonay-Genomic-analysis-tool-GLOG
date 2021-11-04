@@ -51,14 +51,20 @@
 
     <!-- window input sequence -->
     <div id = input_window>
-        <div class = "formblock all" in="qseq">
+        <div>
             <label for ="seq">Enter FASTA sequence(s)</label>
-            <textarea id = "seq" class = "reset" rows = "5" cols = "80" name = "QUERY" suggesthint></textarea>
-            <label for="avatar"></label>
-            <input type="file"id="avatar" name="avatar" accept=".fasta">
-            <button type="button" onclick="displayValue();">BLAST</button>
-            
+            <textarea id = "seq" class = "reset" rows = "5" cols = "110" name = "QUERY" suggesthint></textarea>
+            <div class = "parent-div"> 
+                <button class="btn-upload">Choisir un fichier</button>
+                <input type="file" name="upfile" />
+            </div>
+            <div class = "blast">
+                <!--<label for="file" class="label-file"></label>
+                <input type="file"id="file" class = "input-file" accept=".fasta">-->
+                <button class="btn-blast" onclick="displayValue();">BLAST</button>    
+            </div>
         </div>
+        
     </div>
  
 
